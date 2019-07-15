@@ -8,7 +8,6 @@ class Category extends React.Component {
     }
 
     componentDidMount() {
-        console.log(this.getCategory());
         var url = `https://newsapi.org/v2/top-headlines?country=us&category=${this.getCategory()}&apiKey=9c08cbd8ac004bb08d92315c5bfb5fe6`;
         var req = new Request(url);
         fetch(req).then(response => {
@@ -18,6 +17,11 @@ class Category extends React.Component {
                 });
             });
         });
+    }
+
+    handleClick(e) {
+        e.preventDefault();
+        window.location.href = `/${e.target.name}`;
     }
 
     renderArticles() {
@@ -39,7 +43,7 @@ class Category extends React.Component {
     render() {
         return (
             <div>
-                <NavigationBar history={this.props.history} articles={this.state.articles}/>
+                <NavigationBar clickHandler={this.handleClick}/>
                 <h1 className="category-title">{this.capitalize(this.getCategory())}</h1>
                 { this.state.articles.length > 0 && this.renderArticles() }
             </div>
