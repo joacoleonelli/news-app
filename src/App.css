@@ -59,3 +59,10 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
+.centered-loading {
+  height: 50vh; /* Magic here */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
