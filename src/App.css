@@ -70,3 +70,8 @@
 .nav-bar {
   background-color: #282c34;
 }
+
+.btn.nav-bar {
+  background-color: #4287f5;
+  color: #ffffff
+}

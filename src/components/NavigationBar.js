@@ -30,7 +30,7 @@ class NavigationBar extends React.Component {
                   </MDBNavbarBrand>
                   {
                       isMobile ? 
-                      <MDBHamburgerToggler color="#ffffff" id="hamburger1" onClick={this.toggleCollapse} />
+                      <MDBHamburgerToggler color="#ffffff" id="hamburger1" onClick={this.toggleCollapse}/>
                        : <MDBNavbarToggler onClick={this.toggleCollapse} />
                     }
                   

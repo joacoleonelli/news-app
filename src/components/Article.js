@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-
+import { MDBBtn } from "mdbreact";
 class Article extends React.Component {
     render() {
         const {author, content, description, title, url, publishedAt, urlToImage} = this.props.article;
@@ -17,7 +17,9 @@ class Article extends React.Component {
                                 Author: <cite title="Author">{author}</cite>
                             </footer>
                         </blockquote>
-                        <Card.Link href={url}>Original source</Card.Link>
+                        <MDBBtn href={url} size="md" className="nav-bar">
+                            Read more
+                        </MDBBtn>
                     </Card.Body>
                 </Card>
         )
