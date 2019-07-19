@@ -9,31 +9,15 @@ class Category extends React.Component {
     }
 
     componentDidMount() {
-        const localStorageRef = localStorage.getItem(this.getCategory());
-        if (localStorageRef) {
-            setTimeout(() => {
-                this.setState({
-                    articles: JSON.parse(localStorageRef)
-                });
-            }, 1000);
-        } else {
-            var url = `https://newsapi.org/v2/top-headlines?country=us&category=${this.getCategory()}&apiKey=9c08cbd8ac004bb08d92315c5bfb5fe6`;
-            var req = new Request(url);
-            fetch(req).then(response => {
-                response.json().then(resp => {
-                    this.setState({
-                        articles: resp.articles
-                    });
-                });
-            });
-        }
-    }
-
-    componentDidUpdate() {
-        localStorage.setItem(
-            this.getCategory(), 
-            JSON.stringify(this.state.articles)
-        );
+      var url = `https://newsapi.org/v2/top-headlines?country=us&category=${this.getCategory()}&apiKey=9c08cbd8ac004bb08d92315c5bfb5fe6`;
+      var req = new Request(url);
+      fetch(req).then(response => {
+          response.json().then(resp => {
+              this.setState({
+                  articles: resp.articles
+              });
+          });
+      });
     }
 
     handleClick(e) {
