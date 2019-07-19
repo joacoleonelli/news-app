@@ -42,7 +42,7 @@ class NavigationBar extends React.Component {
                       </MDBNavItem>
                       { 
                         Constants.CATEGORIES.map(category => (
-                          <MDBNavItem active>
+                          <MDBNavItem key={category} active>
                             <MDBNavLink to="#!" name={category.toLowerCase()} onClick={this.props.clickHandler}>{category}</MDBNavLink>
                           </MDBNavItem>
                         )) 

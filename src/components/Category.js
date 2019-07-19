@@ -25,14 +25,6 @@ class Category extends React.Component {
         window.location.href = `/${e.target.name}`;
     }
 
-    renderArticles() {
-        let rows = [];
-        this.state.articles.forEach(a => {
-            rows.push(<Article article={a}/>);
-        })
-        return <tbody className="category-content">{rows}</tbody>;
-    }
-
     getCategory() {
         return this.props.location.pathname.replace("/", "");
     }
@@ -46,8 +38,16 @@ class Category extends React.Component {
             <div>
                 <NavigationBar clickHandler={this.handleClick}/>
                 <h1 className="category-title">{this.capitalize(this.getCategory())}</h1>
-                { this.state.articles.length > 0 ? 
-                    this.renderArticles() :
+                { 
+                  this.state.articles.length > 0 ?
+                    <div className="category-content">
+                      { 
+                        this.state.articles.map(a => (
+                          <Article key={a.title} article={a}/>
+                        ))
+                      }
+                    </div>
+                    :
                     <div className="centered-loading">
                     <ReactLoading type="spin" color={'#282c34'} height={75} width={75} />
                 </div>}
