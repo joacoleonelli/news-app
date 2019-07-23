@@ -59,7 +59,14 @@ render() {
             <NavigationBar clickHandler={this.handleClick}/>
             <h1 className="headlines-title">Headlines</h1>
             { this.state.headlines.length > 0 ?
-                this.renderHeadlines() : 
+                <div className="category-content">
+                { 
+                  this.state.headlines.map(a => (
+                    <Article key={a.title} article={a}/>
+                  ))
+                }
+              </div>
+              : 
                 <div className="centered-loading">
                     <ReactLoading type="spin" color={'#282c34'} height={75} width={75} />
                 </div>
