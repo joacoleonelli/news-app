@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter snapshot renders 1`] = `
+<div
+  className="article-content card"
+>
+  <img
+    className="card-img-top"
+  />
+  <div
+    className="card-body"
+  >
+    <div
+      className="card-title h5"
+    />
+    <p
+      className="card-text"
+    />
+    <blockquote
+      className="blockquote mb-0"
+    >
+      <footer
+        className="blockquote-footer"
+      >
+        Author: 
+        <cite
+          title="Author"
+        >
+          Test
+        </cite>
+      </footer>
+    </blockquote>
+    <button
+      className="btn btn-default btn-md Ripple-parent nav-bar"
+      onMouseUp={[Function]}
+      onTouchStart={[Function]}
+      type="button"
+    >
+      Read more
+      <div
+        className="Ripple "
+        style={
+          Object {
+            "height": "0px",
+            "left": "0px",
+            "top": "0px",
+            "width": "0px",
+          }
+        }
+      />
+    </button>
+  </div>
+</div>
+`;
