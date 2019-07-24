@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import Article from './components/Category';
+import Article from './components/Article';
 
 describe('Counter', () => {
   test('snapshot renders', () => {

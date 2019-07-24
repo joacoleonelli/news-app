@@ -1,12 +1,13 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import { MDBBtn } from "mdbreact";
+import ProgressiveImage from "./ProgressiveImage";
 class Article extends React.Component {
     render() {
         const {author, content, description, title, url, publishedAt, urlToImage} = this.props.article;
         return (
                 <Card className="article-content">
-                    <Card.Img variant="top" src={urlToImage} />
+                        <ProgressiveImage image={urlToImage} />
                     <Card.Body>
                         <Card.Title>{title}</Card.Title>
                         <Card.Text>
