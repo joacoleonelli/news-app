@@ -36,6 +36,7 @@ class ProgressiveImage extends React.Component {
         transition: '0.5s filter linear',
         filter: `${loading ? 'blur(50px)' : ''}`,
         width: '100%',
+        height: "15rem",
         borderTopLeftRadius: "calc(0.25rem - 1px)",
         borderTopRigthRadius: "calc(0.25rem - 1px)"
       }

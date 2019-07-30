@@ -61,6 +61,7 @@ code {
 
 .article-content {
   width: 25rem;
+  height: 35rem;
   margin-bottom: 20px;
 }
 
@@ -71,7 +72,7 @@ code {
 }
 
 .centered-loading {
-  height: 50vh; /* Magic here */
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,10 +83,36 @@ code {
 }
 
 .btn.nav-bar {
-  background-color: #4287f5;
-  color: #ffffff
+  background-color: #ffffff;
+  color: #757575;
+  border: solid #757575 1px;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: .02em;
 }
 
 .img-card {
   width: 100%;
+}
+
+.read-button {
+  height: 0px;
+	padding-top: 0px;
+  overflow:hidden;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  margin-top:570px;
+	position:absolute;
+  color: #FFF;
+  left: 80%
+}
+
+.article-content:hover .read-button {
+	margin-top:495px;
+  height:69px;
+	padding-top: 10px;
 }
