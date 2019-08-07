@@ -91,6 +91,7 @@ code {
   font-weight: 500;
   line-height: 17px;
   letter-spacing: .02em;
+  padding: 9px 22px;
 }
 
 .img-card {
@@ -99,7 +100,7 @@ code {
 
 .read-button {
   height: 0px;
-	padding-top: 0px;
+  padding-top: 0px;
   overflow:hidden;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
@@ -108,7 +109,7 @@ code {
   margin-top:570px;
 	position:absolute;
   color: #FFF;
-  left: 80%
+  left: 76%
 }
 
 .article-content:hover .read-button {
